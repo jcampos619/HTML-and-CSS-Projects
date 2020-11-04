@@ -3,6 +3,9 @@
 	<head>
 		<title>Billie Eilish</title>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CSS/one_page_website.css"/>
+		
+        
 	</head>
 	<body>
 		
@@ -33,35 +36,57 @@
 		<section>
 			<div id="discography">
 				<h2>Discography</h2>
-				<div>
+
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+						<img src="images/billie/billie_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					</div>
+					<div class="column">
+						<img src="images/billie/billie_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					</div>
+					
+				</div>
 				
-					<!-- PHOTO-CONTAINER 1 -->
-					<div>
-						<div>
-							<img src="C:\Users\Student\Desktop\One-Page Websites\images\billie\billie_1.jpg" alt="First album">
-							<div>
-								<h3>don't smile at me</h3>
-							</div>
-						</div>
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				
+					<div class="mySlides">
+						<div class="numbertext">1 / 2</div>
+						<img src="images/billie/billie_1.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO-CONTAINER 1 -->
-					
-					<!-- PHOTO-CONTAINER 2 -->
-					<div>
-						<div>
-							<img src="C:\Users\Student\Desktop\One-Page Websites\images\billie\billie_2.jpg" alt="Second album">
-							<div>
-								<h3>WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?</h3>
-							</div>
-						</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">2 / 2</div>
+						<img src="images/billie/billie_2.jpg" style="width:100%">
 					</div>
-					<!-- END PHOTO-CONTAINER 2 -->
-					
+				
+				
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+				
+					<!-- Thumbnail image controls -->
+					<div class="column">
+						<img class="demo" src="images/billie/billie_1.jpg" onclick="currentSlide(1)" alt="don't smile at me">
+					</div>
+				
+					<div class="column">
+						<img class="demo" src="images/billie/billie_2.jpg" onclick="currentSlide(2)" alt="WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?">
+					</div>
+
 				</div>
 			</div>
 		</section>
 		<!-- END DISCOGRAPHY -->
-		
+
 		<!-- MUSIC VIDEO -->
 		<section>
 			<div id="music video">
@@ -108,7 +133,5 @@
 		</div>
 		<!-- END FOOTER -->
 		
-	</body>
-</html>
 	</body>
 </html>
